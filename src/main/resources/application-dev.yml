@@ -1,0 +1,18 @@
+#服务器端口配置
+server:
+  port: 8081
+#数据库配置
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/springboot_crud1?useUnicode=true&characterEncoding=utf-8&nullCatalogMeansCurrent=true&useSSL=true&&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.example.demo.entity
+#showSQL
+logging:
+  level:
+    com.example.demo.entity: debug
